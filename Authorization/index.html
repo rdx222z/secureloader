@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Authorization</title></head>
+<body>
+<script>
+  const ua = navigator.userAgent.toLowerCase();
+  const isRoblox = ua.includes("roblox") || ua.includes("wininet");
+  if (!isRoblox) {
+    document.body.innerHTML = "<h2>⛔ Acceso denegado: este script solo puede cargarse desde Roblox</h2>";
+  } else {
+    const params = new URLSearchParams(window.location.search);
+    const key = params.get("k");
+    if (!key || !/^[a-f0-9]{32}$/.test(key)) {
+      document.body.innerHTML = "<h2>⛔ Token inválido</h2>";
+    } else {
+      window.location.href = `../scripts/${key}.lua`;
+    }
+  }
+</script>
+</body>
+</html>
