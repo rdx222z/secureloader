@@ -1,14 +1,15 @@
 const express = require('express');
+const serverless = require('serverless-http');
 const app = express();
-const port = process.env.PORT || 3000;
 
-// Token fijo (puedes cambiarlo)
+// Token fijo (cámbialo si quieres)
 const VALID_TOKEN = 'abc123';
 
-app.use(express.static('public'));
+// Servir archivos estáticos desde la raíz
+app.use(express.static('.'));
 
 app.get('/secureloader', (req, res) => {
-    const userAgent = req.get('User-Agent');
+    const userAgent = req.headers['user-agent'];
     const token = req.query.token;
 
     // Verificar User-Agent y token
@@ -16,10 +17,9 @@ app.get('/secureloader', (req, res) => {
         res.set('Content-Type', 'text/plain');
         res.send('loadstring(game:HttpGet("https://raw.githubusercontent.com/rdx222f/Scripts/refs/heads/main/StealABrainrot.lua"))()');
     } else {
-        res.sendFile(__dirname + '/public/index.html');
+        res.sendFile(__dirname + '/index.html');
     }
 });
 
-app.listen(port, () => {
-    console.log(`Servidor corriendo en http://localhost:${port}`);
-});
+// Exportar como función serverless para Netlify
+module.exports.handler = serverless(app);
