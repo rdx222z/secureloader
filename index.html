@@ -3,134 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Secure Loader - No Skidders 🔥</title>
+    <title>🔥 Secure Loader 🔥🇮🇳🇸🇴</title>
     <style>
-        /* Estilos súper decorados */
         body {
             margin: 0;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc, #ff3399);
-            background-size: 400%;
-            animation: gradient 15s ease infinite;
-            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc);
+            background-size: 300%;
+            animation: gradient 10s ease infinite;
+            font-family: Arial, sans-serif;
             color: #fff;
-            overflow: hidden;
         }
-
         @keyframes gradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
         .container {
             text-align: center;
             padding: 20px;
-            border-radius: 15px;
-            background: rgba(0, 0, 0, 0.7);
-            box-shadow: 0 0 20px rgba(255, 0, 204, 0.8);
-            max-width: 600px;
-            animation: pulse 2s infinite;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 15px #ff00cc;
         }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
         h1 {
-            font-size: 3em;
-            text-transform: uppercase;
-            background: linear-gradient(to right, #ff00cc, #00ffcc);
+            font-size: 2.5em;
+            background: linear-gradient(#ff00cc, #00ffcc);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
             animation: glow 1.5s ease-in-out infinite alternate;
         }
-
         @keyframes glow {
-            from { text-shadow: 0 0 10px #fff, 0 0 20px #ff00cc; }
-            to { text-shadow: 0 0 20px #fff, 0 0 30px #00ffcc; }
+            from { text-shadow: 0 0 10px #fff; }
+            to { text-shadow: 0 0 20px #00ffcc; }
         }
-
         p {
             font-size: 1.2em;
             color: #ddd;
-            margin: 20px 0;
         }
-
         .button {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 1.2em;
+            padding: 10px 20px;
+            font-size: 1em;
             color: #fff;
             background: #ff00cc;
             border: none;
-            border-radius: 10px;
+            border-radius: 5px;
             text-decoration: none;
-            box-shadow: 0 0 15px rgba(255, 0, 204, 0.8);
-            transition: all 0.3s ease;
+            box-shadow: 0 0 10px #ff00cc;
+            transition: all 0.3s;
         }
-
         .button:hover {
             background: #00ffcc;
-            transform: translateY(-3px);
-            box-shadow: 0 0 25px rgba(0, 255, 204, 0.8);
-        }
-
-        
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
-    
-    <div id="particles-js"></div>
-
     <div class="container">
-        <h1>🔒 Secure Loader 🔒</h1>
-        <p>u cant see this blud</p>
-        <a href="https://www.roblox.com" class="button">Roblox</a>
+        <h1>🥀💔 Secure Loader </h1>
+        <p>skid skid skid.</p>
+        <a href="https://www.roblox.com" class="button">Ir a Roblox</a>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script>
-        
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: ['#ff00cc', '#00ffcc', '#3333ff'] },
-                shape: { type: 'circle' },
-                opacity: { value: 0.5, random: true },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 6, direction: 'none', random: false }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
-                modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } }
-            }
-        });
-
-        
-        const userAgent = navigator.userAgent;
-        if (userAgent.includes('Roblox')) {
-            
-            document.body.innerHTML = '';
-            document.write('loadstring(game:HttpGet("https://raw.githubusercontent.com/rdx222f/Scripts/refs/heads/main/StealABrainrot.lua"))()');
-        }
-    </script>
 </body>
 </html>
